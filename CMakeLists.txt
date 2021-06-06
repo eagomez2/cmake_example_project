@@ -20,12 +20,21 @@ set(msvc_flags "-W3")
 # necessary for vim to autocomplete correctly
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# to build shared libraries
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+
+# add subdirectory to locate the library
+add_subdirectory(lib/interp)
+
 # call configure file
 configure_file(include/Config.h.in
         "${CMAKE_CURRENT_SOURCE_DIR}/include/Config.h")
 
 # compile source files into an executable
 add_executable(my_project "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
+
+# like against library
+target_link_libraries(my_project interp)
 
 # another way to request a c++ spec
 target_compile_features(my_project PUBLIC cxx_std_11)
