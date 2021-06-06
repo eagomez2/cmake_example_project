@@ -1,0 +1,3 @@
+#pragma once
+#define VERSION_MAJOR @my_project_VERSION_MAJOR@
+#define VERSION_MINOR @my_project_VERSION_MINOR@
