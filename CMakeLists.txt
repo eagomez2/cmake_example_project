@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 # project name and version
 project(my_project VERSION 1.0)
 
-# request c++ features
+# request c++ standard
 # set(CMAKE_CXX_STANDARD 11)
 # set(CMAKE_CXX_STANDARD_REQUIRED True)
 
